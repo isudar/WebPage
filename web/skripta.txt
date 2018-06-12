@@ -1,0 +1,21 @@
+DROP DATABASE IF EXISTS rk;
+CREATE DATABASE rk;
+USE rk;
+
+CREATE TABLE korisnik(
+    id INT AUTO_INCREMENT,
+    korisnickoIme   VARCHAR(255),
+    zaporka VARCHAR(255),
+    ime VARCHAR(255),
+    prezime VARCHAR(255),
+    CONSTRAINT PK_korisnik PRIMARY KEY(id)
+);
+
+CREATE TABLE komentar(
+    id INT AUTO_INCREMENT,
+    tekst TEXT,
+    datum   DATETIME,
+    korisnik_id INT,
+    CONSTRAINT PK_komentar PRIMARY KEY(id),
+    CONSTRAINT FK_korisnik FOREIGN KEY(korisnik_id) REFERENCES korisnik(id)
+);

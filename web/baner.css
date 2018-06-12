@@ -1,0 +1,16 @@
+#baner {
+    background-image: url("grb.png"), url("naslovnica.png"); 
+    background-color: lightgrey;
+    margin-left: 35px;
+    margin-right: 35px;
+
+    background-repeat: no-repeat,no-repeat;
+    background-size: 300px 300px, auto 350px;
+    background-position: left, right;
+    height: 350px;
+    color:black;
+   
+}
+#naslov{
+    margin-left: 320px;
+}
